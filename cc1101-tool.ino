@@ -4,7 +4,24 @@
 // on selected radio channel, modulation, ..
 //
 // (C) Adam Loboda '2023 , adam.loboda@wp.pl
-//  
+// tx 1 010203040506070809aabbccddeeff
+Transmitting Rf packet .
+Sent frame : 010203040506070809AABBCCDDEEFF
+tx 1 010203040506070809aabbccddeeff
+Transmitting RF packets.
+Sent frame: 010203040506070809AABBCCDDEEFF
+tx 1 010203040506070809AABBCCDDEEFF010203040506070809AABBCCDDEEFF
+Transmiting RF packets.
+Sent frame: 010203040506070809AABBCCDDEEFF
+tx1 010203040506070809AABBCCDDEEFF010203040506070809AABBCCDDEEFF
+Transmitting RF packets.
+Sent frame: 010203040506070809AABBCCDDEEFF010203040506070809AABBCCDDEEFF
+tx 1 010203040506070809AABBCCDDEEFF
+Transmitting RF packets.
+Sent frame 010203040506070809AABBCCDDEEFF
+tx 1 010203040506070809AABBCCDDEEFF010203040506070809AABBCCDDEEFF
+Transmiting RF packets.
+Sent frame 010203040506070809AABBCCDDEEFF010203040506070809AABBCCDDEEFF
 // based on great SmartRC library by Little_S@tan
 // Please download ZIP from 
 // https://github.com/LSatan/SmartRC-CC1101-Driver-Lib
@@ -232,7 +249,7 @@ static void exec(char *cmdline)
           "x : Stops jamming/receiving/recording packets.\r\n\r\n"
           "init : Restarts CC1101 board with default parameters\r\n\r\n"
          ));
-
+   
     // Handling SETMODULATION command 
     } else if (strcmp_P(command, PSTR("setmodulation")) == 0) {
         setting = atoi(cmdline);
